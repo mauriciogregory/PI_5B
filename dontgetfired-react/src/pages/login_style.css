@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.green_vertical_bar {
+    background-color: green;
+    width: 4rem;
+    height: 100vh;
+}
+
+@media (max-width: 800px) {
+    main {
+        padding: 2rem;
+        display: flex;
+        flex-direction:column-reverse;
+    }
+    .green_vertical_bar {
+        width: 0;
+        height: 0;
+    }
+    img {
+        padding: 10px;
+    }
+}

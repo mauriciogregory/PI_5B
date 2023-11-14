@@ -1,0 +1,10 @@
+.container_signup {
+    padding: 5rem 20rem;
+}
+
+@media (max-width: 800px) {
+    .container_signup {
+        padding: 1rem 1rem;
+    }
+}
+
