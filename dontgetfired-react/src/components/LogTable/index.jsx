@@ -22,7 +22,7 @@ export function LogTable() {
     // fetch('https://localhost:5001/api/log').then(response => response.json())
     // .then(data => console.log(data[0].id))
 
-    axios.get("https://localhost:5001/api/log/").then((response) => {
+    axios.get("http://localhost:5001/api/log/").then((response) => {
       // const { UserId } = response.data;
       // console.log(response.data);
 
