@@ -37,5 +37,10 @@ dotnet ef database update
 #### Frontend
 ```sh
 #entra na pasta do projeto de frontend dontgetfired-react
+
+#instala as dependências
+npm i
+
+#roda o projeto
 npm run start
 ```
