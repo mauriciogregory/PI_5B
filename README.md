@@ -32,3 +32,10 @@ Criar as tabelas no Banco de Dados:
 dotnet ef database update
 ```
 # ethereal.email logar com o user e pass do appsettings.json
+
+
+#### Frontend
+```sh
+#entra na pasta do projeto de frontend dontgetfired-react
+npm run start
+```
