@@ -125,7 +125,16 @@ namespace DGFweb.Api.Controllers
             var user = await _context.User.Where(_ => _.Id == id).FirstOrDefaultAsync();
 
             // var updateUser = _mapper.Map<UserDTO>(updateUserDto);
-            user.password = BCrypt.Net.BCrypt.HashPassword(updateUserDto.password);
+            user!.password = BCrypt.Net.BCrypt.HashPassword(updateUserDto.password);
+
+            var log = new Log
+            {
+                Mensagem = "Usuário Modificado!",
+                DataCreateAt = DateTime.UtcNow
+            };
+
+            user!.Log.Add(log);
+
             user.Name = updateUserDto.Name;
             // user.lastName = updateUserDto.lastName;
             _context.User.Update(user);

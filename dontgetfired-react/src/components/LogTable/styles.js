@@ -10,7 +10,7 @@ export const Container = styled.div`
         /* margin: 10px; */
 
         th {
-            text-align: left;
+            text-align: center;
             border: solid 1px #f1f1f1;
             font-weight: 500;
             color: #231212;
@@ -22,6 +22,11 @@ export const Container = styled.div`
 
             border: 1px solid #f1f1f1;
             padding: 0.8rem;
+        }
+
+        button {
+            color: red;
+            background-color: gray;
         }
     }
 `

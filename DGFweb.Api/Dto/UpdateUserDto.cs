@@ -10,6 +10,8 @@ public class UpdateUserDto
         public string Name { get; set; } = default!;
         // public string lastName { get; set; }
         public string password { get; set; }
+
+        // public List<LogDTO> Log { get; set; }
 }
 
 

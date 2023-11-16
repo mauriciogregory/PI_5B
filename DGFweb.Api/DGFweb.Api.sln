@@ -5,8 +5,7 @@ VisualStudioVersion = 17.5.001.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGFweb.Api", "DGFweb.Api.csproj", "{3A43B1C4-0D0D-475B-A4CC-F16B375BE625}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGFweb.Api.Testes", "DGFweb.Api.Testes\DGFweb.Api.Testes.csproj", "{CF52EBED-00CC-4965-A736-7DDF5ED907FD}"
-EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

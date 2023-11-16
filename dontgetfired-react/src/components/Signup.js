@@ -37,6 +37,7 @@ export default function Signup() {
       navigate("/signin")
     });
     console.log("usuário criado com sucesso");
+    alert("Usuário com sucesso!");
   };
 
   return (

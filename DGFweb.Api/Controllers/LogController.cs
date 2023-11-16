@@ -14,7 +14,7 @@ namespace DGFweb.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LogController: ControllerBase
+    public class LogController : ControllerBase
     {
         private readonly UserContext _context;
         private readonly IMapper _mapper;
@@ -29,23 +29,23 @@ namespace DGFweb.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Log>>> GetLog()
         {
-          if (_context.Log == null)
-          {
-              return NotFound();
-          }
+            if (_context.Log == null)
+            {
+                return NotFound();
+            }
             return await _context.Log.ToListAsync();
         }
 
         // https://localhost:5001/api/log
         [HttpPost]
-        public async Task<IActionResult> PostLog(LogDTO Logdto)
+        public async Task<IActionResult> PostLog(LogDTO log)
         {
-          if (_context.Log == null)
-          {
-              return Problem("Entity set 'LogContext.Log'  is null.");
-          }
-           
-           var newLog = _mapper.Map<Log>(Logdto);
+            if (_context.Log == null)
+            {
+                return Problem("Entity set 'LogContext.Log'  is null.");
+            }
+
+            var newLog = _mapper.Map<Log>(log);
             _context.Log.Add(newLog);
             await _context.SaveChangesAsync();
 
@@ -56,10 +56,10 @@ namespace DGFweb.Api.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Log>> GetLog(int id)
         {
-          if (_context.Log == null)
-          {
-              return NotFound();
-          }
+            if (_context.Log == null)
+            {
+                return NotFound();
+            }
             var log = await _context.Log.FindAsync(id);
 
             if (log == null)
@@ -70,6 +70,26 @@ namespace DGFweb.Api.Controllers
             return log;
         }
 
+        // deleta: https://localhost:5001/api/log/1
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteLog(int id)
+        {
+            if (_context.Log == null)
+            {
+                return NotFound();
+            }
+            var log = await _context.Log.FindAsync(id);
+            if (log == null)
+            {
+                return NotFound();
+            }
+
+            _context.Log.Remove(log);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
     }
- 
+
 }

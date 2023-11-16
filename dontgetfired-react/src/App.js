@@ -7,6 +7,7 @@ import SignupPage from './pages/Signup';
 import LoginPage from './pages/Login';
 import HomePage from './pages/Home';
 import RecoverPassword from "./pages/RecoverPassword";
+import Details from "./pages/Details";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/signup" element={<SignupPage/>} />
             <Route path="/signin" element={<LoginPage/>} />
             <Route path="/recover-password" element={<RecoverPassword/>} />
+            <Route path="/details/:id" element={<Details />}/>
         </Routes>
       </BrowserRouter>
    // </div>
