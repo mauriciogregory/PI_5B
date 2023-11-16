@@ -11,7 +11,7 @@ public class UpdateUserDto
         // public string lastName { get; set; }
         public string password { get; set; }
 
-        // public List<LogDTO> Log { get; set; }
+        public List<LogDTO> Log { get; set; }
 }
 
 

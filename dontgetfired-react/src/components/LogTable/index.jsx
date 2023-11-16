@@ -14,18 +14,13 @@ export function LogTable({ isNew, value, onClick, ...rest }) {
   let lista = [];
 
   useEffect(() => {
-    // fetch('https://localhost:5001/api/log').then(response => response.json())
-    // .then(data => console.log(data[0].id))
-
     axios.get("http://localhost:5001/api/log/").then((response) => {
       for (const log of response.data) {
-        // console.log(log.userId);
         if (id === log.userId.toString()) {
           lista.push(log);
         }
 
         setLogs(lista);
-        // console.log(lista);
       }
       // lista = [];
     });
@@ -37,7 +32,7 @@ export function LogTable({ isNew, value, onClick, ...rest }) {
 
   return (
     <Container>
-      <Section title="Log Da Criação do Usuário"></Section>
+      <Section title="Log Do Usuário do Sistema"></Section>
 
       <table>
         <thead>

@@ -12,6 +12,16 @@ const Home = () => {
     Cookies.remove("token");
     delete axios.defaults.headers.common.Authorization;
     setAuthenticated(false);
+    let cont = 0;
+    const id = localStorage.getItem("@dontgetfired:user");
+
+    const body = {
+      dataCreateAt: new Date(),
+      mensagem: "Logged out do Sistema",
+      userId: id,
+    };
+
+    axios.post("http://localhost:5001/api/log/", body);
   };
 
   if (!authenticated) {
