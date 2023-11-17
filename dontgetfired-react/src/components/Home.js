@@ -17,7 +17,7 @@ const Home = () => {
 
     const body = {
       dataCreateAt: new Date(),
-      mensagem: "Logged out do Sistema",
+      mensagem: "Usuário deslogou do Sistema",
       userId: id,
     };
 

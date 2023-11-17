@@ -34,7 +34,7 @@ export default function Signup() {
     };
 
     const res = await axios.post("/api/user", body ).then((res) => {
-      alert("Usuario criado com sucesso")
+      alert("Usuário criado com sucesso")
       navigate("/signin")
     }).catch((error) => {
       if( error.response ){
