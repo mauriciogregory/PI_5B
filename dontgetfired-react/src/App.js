@@ -2,6 +2,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Navigate
 } from "react-router-dom";
 import SignupPage from './pages/Signup';
 import LoginPage from './pages/Login';
@@ -11,8 +12,6 @@ import Details from "./pages/Details";
 
 function App() {
   return (
-    // <div className="min-h-full h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-    // <div className="max-w-md w-full space-y-8">
      <BrowserRouter>
         <Routes>
             <Route path="/" element={<HomePage />} />
@@ -20,10 +19,9 @@ function App() {
             <Route path="/signin" element={<LoginPage/>} />
             <Route path="/recover-password" element={<RecoverPassword/>} />
             <Route path="/details/:id" element={<Details />}/>
+            <Route path="*" element={<Navigate to="/" />}/> 
         </Routes>
       </BrowserRouter>
-   // </div>
-  // </div>
   );
 }
 

@@ -12,7 +12,7 @@ const Home = () => {
     Cookies.remove("token");
     delete axios.defaults.headers.common.Authorization;
     setAuthenticated(false);
-    let cont = 0;
+
     const id = localStorage.getItem("@dontgetfired:user");
 
     const body = {
