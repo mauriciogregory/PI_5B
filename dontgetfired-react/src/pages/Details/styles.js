@@ -3,15 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  display: grid;
-
-  grid-template-rows: 105px auto;
-  grid-template-areas: "header" "content";
 
   > main {
-    grid-area: content;
-    overflow-y: scroll;
-    padding: 64px 0;
+    padding: 3rem 0;
   }
 `;
 
@@ -27,15 +21,15 @@ export const Content = styled.div`
   }
 
   > h1 {
-    font-size: 25px;
+    font-size: 1.125rem;
     font-weight: 500;
-    padding-top: 64px;
+    padding-top: 4rem;
     align-items: center;
   }
 
   > p {
-    font-size: 18px;
-    margin-top: 16px;
+    font-size: 1rem;
+    margin-top: 1rem;
     text-align: justify;
     align-items: center;
   }

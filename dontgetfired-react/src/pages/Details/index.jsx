@@ -55,11 +55,11 @@ export default function Details() {
             <Content>
               <ButtonText title="Excluir Log" onClick={handleRemoveLog} />
 
-              <h1>ID do Log: {data.id}</h1>
+              <h1>ID do Log: <span> {data.id}</span> </h1>
 
-              <p>Data da Criação: {data.dataCreateAt}</p>
-              <p>Mensagem: {data.mensagem}</p>
-              <p>ID do Usuário: {data.userId}</p>
+              <p>Data da Criação:<span>{data.dataCreateAt} </span></p>
+              <p>Mensagem:<span>{data.mensagem}</span> </p>
+              <p>ID do Usuário:<span> {data.userId}</span></p>
 
               <Button title="Voltar" onClick={handleBack} />
             </Content>
