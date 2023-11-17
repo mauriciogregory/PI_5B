@@ -22,7 +22,7 @@ export function LogTable({ isNew, value, onClick, ...rest }) {
 
         setLogs(lista);
       }
-      // lista = [];
+      lista = [];
     });
   }, []);
 
@@ -37,10 +37,10 @@ export function LogTable({ isNew, value, onClick, ...rest }) {
       <table>
         <thead>
           <tr>
-            <th>id</th>
-            <th>DataCreatedAt</th>
+            <th>Id</th>
+            <th>Data de Criação do Log</th>
             <th>Mensagem</th>
-            <th>UserId</th>
+            <th>Id do Usuário</th>
             <th>Opção</th>
           </tr>
         </thead>
@@ -49,7 +49,9 @@ export function LogTable({ isNew, value, onClick, ...rest }) {
           {logs.map((log) => (
             <tr key={log.id} onClick={() => handleLogDescription(log.id)}>
               <td>{log.id}</td>
-              <td className={log.type}>{log.dataCreateAt}</td>
+              <td className={log.type}>{
+              log.dataCreateAt
+              }</td>
               <td>{log.mensagem}</td>
               <td>{log.userId}</td>
               <td className="x">

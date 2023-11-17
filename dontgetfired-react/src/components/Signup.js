@@ -21,11 +21,11 @@ export default function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(signupState);
+    // console.log(signupState);
     createAccount();
   };
 
-  const createAccount = () => {
+  const createAccount = async () => {
     const body = {
       name: signupState.name,
       email: signupState.email,
@@ -33,11 +33,22 @@ export default function Signup() {
       log: []
     };
 
-    axios.post("/api/user", body ).then((res) => {
+    const res = await axios.post("/api/user", body ).then((res) => {
+      alert("Usuario criado com sucesso")
       navigate("/signin")
-    });
-    console.log("usuário criado com sucesso");
-    alert("Usuário com sucesso!");
+    }).catch((error) => {
+      if( error.response ){
+          console.log(error.response.data); // => the response payload 
+          const erro = (error.response.data).split("at")[0]
+          alert(erro.split(":")[1]); //
+      }
+    })
+
+    console.log(res);
+    if(res !== undefined) {
+      console.log("usuário criado com sucesso");
+      alert("Usuário com sucesso!");
+    }
   };
 
   return (

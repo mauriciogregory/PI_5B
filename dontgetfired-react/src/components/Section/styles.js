@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-    margin: 28px 0;
+    margin: 5px 0;
 
     > h2 {
-        border-bottom-width: 1px;
+        border-bottom-width: 0.1rem;
         border-bottom-style: solid;
-        border-bottom-color: ${({theme}) => theme.lightblue};
+        border-bottom-color: lightblue;
 
-        padding-bottom: 16px;
-        margin-bottom: 28px;
+        padding-bottom: 10px;
+        padding-top: 10px;
 
-        color: ${({theme}) => theme.gray};
+        color: #121212;
         font-size: 22px;
-        font-weight: 400;
+        font-weight: 500;
 
         text-align: center;
     }

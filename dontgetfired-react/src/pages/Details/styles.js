@@ -15,16 +15,6 @@ export const Container = styled.div`
   }
 `;
 
-export const Links = styled.ul`
-  list-style: none;
-  > li {
-    margin-top: 12px;
-    a {
-      color: gray };
-    }
-  
-`;
-
 export const Content = styled.div`
   max-width: 550px;
   margin: 0 auto;
@@ -40,12 +30,14 @@ export const Content = styled.div`
     font-size: 25px;
     font-weight: 500;
     padding-top: 64px;
+    align-items: center;
   }
 
   > p {
     font-size: 18px;
     margin-top: 16px;
     text-align: justify;
+    align-items: center;
   }
 
 `;

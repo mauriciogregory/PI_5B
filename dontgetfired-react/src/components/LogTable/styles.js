@@ -2,19 +2,20 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     background-color: lightblue;
-    margin: 4rem;
+    margin: 5rem;
     
     table {
         width: 100%;
-        border-spacing: 0 1rem;
+        border-spacing: 0 2rem;
         /* margin: 10px; */
 
         th {
             text-align: center;
-            border: solid 1px #f1f1f1;
+            border: solid 2px #f1f1f1;
             font-weight: 500;
             color: #231212;
             padding: 0.8rem;
+            font-size: 1.rem;
         }
 
         td {
