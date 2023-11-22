@@ -34,7 +34,7 @@ const Home = () => {
           <br />
           <button
             type="submit"
-            className="group relative w-150 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 mt-10"
+            className="group relative w-150 flex justify-center py-4 px-7 border border-transparent text-lg font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 mt-10"
             onClick={handleLogout}
           >
             Sair
