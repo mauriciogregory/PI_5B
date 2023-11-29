@@ -15,6 +15,7 @@ export function LogTable({ isNew, value, onClick, ...rest }) {
 
   useEffect(() => {
     axios.get("http://localhost:5001/api/log/").then((response) => {
+    // axios.get(`http://localhost:5001/api/user/${id}`).then((response) => {
       for (const log of response.data) {
         if (id === log.userId.toString()) {
           lista.push(log);

@@ -13,7 +13,7 @@ fields.forEach((field) => (fieldsState[field.id] = ""));
 export default function Signup() {
   const [signupState, setSignupState] = useState(fieldsState);
   const disabledBtn = signupState.password !== signupState["confirm-password"] || !signupState.email || !signupState.name || !signupState.password
-  const helperText = !signupState.email || !signupState.name || !signupState.password ? "Preencha os campos do formulário!" : signupState.password !== signupState["confirm-password"]  ? "As senhas informadas estão diferentes!" : "" ;
+  const helperText = !signupState.email || !signupState.name || !signupState.password ? "Preencha os campos do formulário!" : signupState.password !== signupState["confirm-password"]  ? "As senhas informadas estão diferentes!" : ""  ;
   const navigate = useNavigate();
 
   const handleChange = (e) =>
@@ -66,6 +66,7 @@ export default function Signup() {
             type={field.type}
             isRequired={field.isRequired}
             placeholder={field.placeholder}
+            minLength={5}
           />
         ))}
         <p className="text-sm font-medium text-red-300">{helperText}</p>
